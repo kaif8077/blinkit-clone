@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/blinkit-_ogo.jpg">
+    <title>Everything delivered in minutes | Blinkit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="variable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><svg width="134" height="30" viewBox="0 0 114 30" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.3342 7.186C16.2619 7.186 17.9832 7.66644 19.4978 8.62732C21.0262 9.57447 22.2242 10.9197 23.0917 12.663C23.9316 14.3377 24.3516 16.3075 24.3516 18.5724C24.3516 20.7687 23.9316 22.7316 23.0917 24.4612C22.2517 26.1908 21.0675 27.5429 19.5391 28.5175C17.9969 29.5058 16.2619 30 14.3342 30C12.9297 30 11.6078 29.7117 10.3685 29.1352C9.12927 28.5587 8.06901 27.7488 7.18775 26.7056V29.4852H0V0H7.18775V10.4598C8.06901 9.41661 9.12927 8.61359 10.3685 8.05079C11.6078 7.47426 12.9297 7.186 14.3342 7.186ZM12.1861 24.0494C13.2051 24.0494 14.1139 23.8161 14.9125 23.3493C15.7112 22.8826 16.3377 22.2306 16.7921 21.3933C17.2465 20.5697 17.4737 19.6294 17.4737 18.5724C17.4737 17.5429 17.2465 16.6095 16.7921 15.7721C16.3377 14.9348 15.7112 14.2828 14.9125 13.8161C14.1139 13.3493 13.2051 13.116 12.1861 13.116C11.2223 13.116 10.3617 13.3493 9.60432 13.8161C8.84699 14.269 8.2549 14.9073 7.82804 15.731C7.40118 16.5683 7.18775 17.5154 7.18775 18.5724C7.18775 19.6294 7.40118 20.5765 7.82804 21.4139C8.2549 22.2375 8.84699 22.8826 9.60432 23.3493C10.3617 23.8161 11.2223 24.0494 12.1861 24.0494Z"
+                            fill="#F8CB46"></path>
+                        <path d="M25.3356 29.4852V0H32.5233V29.4852H25.3356Z" fill="#F8CB46"></path>
+                        <path d="M34.5607 29.4852V7.68016H41.7071V29.4852H34.5607Z" fill="#F8CB46"></path>
+                        <path
+                            d="M57.2319 7.186C58.7603 7.186 60.1372 7.5429 61.3627 8.25669C62.5882 8.95676 63.5521 9.94509 64.2544 11.2217C64.9291 12.512 65.2664 13.9739 65.2664 15.6074V29.4852H58.4092V17.2135C58.4092 16.4173 58.2508 15.7104 57.9341 15.0927C57.6312 14.4612 57.1974 13.9739 56.6329 13.6307C56.0821 13.2876 55.4349 13.116 54.6914 13.116C53.9891 13.116 53.3419 13.2876 52.7498 13.6307C52.1577 13.9602 51.6965 14.4132 51.366 14.9897C51.0218 15.5388 50.8496 16.1839 50.8496 16.9252L50.8083 29.4852H43.6619V7.68016H50.8083V10.1716C51.483 9.23816 52.3849 8.51064 53.5141 7.98902C54.6432 7.45367 55.8824 7.186 57.2319 7.186Z"
+                            fill="#F8CB46"></path>
+                        <path
+                            d="M81.0597 17.2135L89.1769 29.4852H81.0597L76.3091 21.7639L74.1198 24.2965V29.4852H66.932V0H74.1198V16.2869L81.0184 7.68016H89.1356L81.0597 17.2135Z"
+                            fill="#F8CB46"></path>
+                        <path d="M34.5569 0.00232667H41.7267V5.59207H34.5569V0.00232667Z" fill="#F8CB46"></path>
+                        <path d="M90.3176 29.4198V7.61479H97.464V29.4198H90.3176Z" fill="#54B226"></path>
+                        <path
+                            d="M112.575 23.2634L114 27.855C113.353 28.4727 112.534 28.9737 111.542 29.3581C110.564 29.7424 109.607 29.9346 108.671 29.9346C107.322 29.9346 106.117 29.6395 105.057 29.0492C103.996 28.4452 103.17 27.6079 102.578 26.5372C101.986 25.494 101.69 24.2929 101.69 22.9339V13.3183H98.819V7.61479H101.69V0.00241089H108.547V7.61479H113.071V13.3183H108.547V21.6161C108.547 22.3162 108.733 22.8859 109.105 23.3251C109.477 23.7644 109.952 23.984 110.53 23.984C110.943 23.984 111.329 23.9223 111.687 23.7987C112.045 23.6752 112.341 23.4967 112.575 23.2634Z"
+                            fill="#54B226"></path>
+                        <path d="M90.2609 0.00241089H97.4307V5.59215H90.2609V0.00241089Z" fill="#54B226"></path>
+                    </svg></a>
+            </div>
+            <div class="location">
+                <div class="location-title">Delivery in 16 minutes</div>
+                <div class="location-description">Delhi, India
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+
+            </div>
+            <div class="search-bar">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="search-input"><input type="text" placeholder="Search Button"></div>
+
+            </div>
+            <div class="login">
+                Login
+
+            </div>
+            <div class="cart">
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    &nbsp;&nbsp; My Cart
+                </button>
+
+            </div>
+        </div>
+    </header>
+    <main class="wrapper ">
+        <div class="main-container">
+            <section class="banner">
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg"
+                    alt="banner" alt="">
+            </section>
+            <section class="banner-2">
+                <div class="banner-img"> <img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg">
+                </div>
+                <div class="banner-img"><img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg">
+                </div>
+                <div class="banner-img"> <img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg"
+                        alt=""></div>
+                <div class="banner-img"> <img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg">
+                </div>
+                <div class="banner-img"><img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg">
+                </div>
+                <div class="banner-img"> <img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg"
+                        alt=""></div>
+
+
+            </section>
+
+            <section class="category">
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png"
+                        alt="Paan Corner">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-2_10.png"
+                        alt="Dairy, Bread & Eggs">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-3_9.png"
+                        alt="Fruits & Vegetables">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-4_9.png"
+                        alt="Cold Drinks & Juices">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-5_4.png"
+                        alt="Snacks & Munchies">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-6_5.png"
+                        alt="Breakfast & Instant Food">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-7_3.png"
+                        alt="Sweet Tooth">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-8_4.png"
+                        alt="Bakery & Biscuits">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-9_3.png"
+                        alt="Tea, Coffee & Health Drink">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-10.png"
+                        alt="Atta, Rice & Dal">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png"
+                        alt="Masala, Oil & More">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-12.png"
+                        alt="Sauces & Spreads">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-13.png"
+                        alt="Chicken, Meat & Fish">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-14.png"
+                        alt="Organic & Healthy Living">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-15.png"
+                        alt="Baby Care">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-16.png"
+                        alt="Pharma & Wellness">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-17.png"
+                        alt="Cleaning Essentials">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-18.png"
+                        alt="Home & Office">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-19.png"
+                        alt="Personal Care">
+                </div>
+
+                <div class="section3">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-20.png"
+                        alt="Pet Care">
+                </div>
+            </section>
+
+
+            <section class="items">
+                <div class="tittle">
+                    <div class="category-name">
+                        Daily, Bread & Eggs
+                    </div>
+                    <a href="#">see all</a>
+                </div>
+                <div class="list-items">
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/628c97e0-5ed4-425d-a667-1d3bfa6f0bde.png"
+                                alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Amul Gold Full Cream Milk</div>
+                            <div class="item-weigth">500 ml</div>
+                            <div class="item-price">
+                                <div class="price">₹35</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/5734b087-3ad9-485f-bbe2-52079cd9e35d.png"
+                                alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Amul Taaza Toned Milk</div>
+                            <div class="item-weigth">500 ml</div>
+                            <div class="item-price">
+                                <div class="price">₹29</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/ae29e828-f5d9-4f8b-89b6-8c6d6919df7b.png"
+                                alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Amul Cow Milk</div>
+                            <div class="item-weigth">500 ml</div>
+                            <div class="item-price">
+                                <div class="price">₹30</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/1ded64a0-9f20-4a1d-8211-156f221b377b.png"
+                                alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Amul Buffalo A2 Milk</div>
+                            <div class="item-weigth">500 ml</div>
+                            <div class="item-price">
+                                <div class="price">₹38</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/b29ac54f-74fb-4e33-9e68-cde5598bd529.png"
+                                alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Country Delight Cow Fresh Milk</div>
+                            <div class="item-weigth">450 ml</div>
+                            <div class="item-price">
+                                <div class="price">₹42</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=540/da/cms-assets/cms/product/d411584f-c6d4-4024-a48f-109aef61f973.png"
+                                alt="">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Country Delight Buffalo Fresh Milk</div>
+                            <div class="item-weigth">450 ml</div>
+                            <div class="item-price">
+                                <div class="price">₹49</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="items">
+                <div class="tittle">
+                    <div class="category-name">
+                        Rolling Papers & Accessories
+                    </div>
+                    <a href="#">see all</a>
+                </div>
+                <div class="list-items">
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/app/images/products/sliding_image/539905a.jpg"
+                                alt="Mozo Ultimate Rolling Paper with Filter Tips">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Ultimate Rolling Paper with Filter Tips & Crushing Tray (King Size,
+                                Unbleached) - Mozo</div>
+                            <div class="item-weigth">32 pcs</div>
+                            <div class="item-price">
+                                <div class="price">₹90</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/app/images/products/sliding_image/539887a.jpg"
+                                alt="Brown Ripper Rolling Paper + Roaches Stash Pro">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Brown Ripper Rolling Paper + Roaches Stash Pro</div>
+                            <div class="item-weigth">64 pcs</div>
+                            <div class="item-price">
+                                <div class="price">₹120</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/app/images/products/sliding_image/539908a.jpg"
+                                alt="Perfect Rolling Paper (Pink) - Bongchie">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Perfect Rolling Paper (Pink) - Bongchie</div>
+                            <div class="item-weigth">3 pack</div>
+                            <div class="item-price">
+                                <div class="price">₹45</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/app/images/products/sliding_image/539896a.jpg"
+                                alt="Original Gangster Brown Leaves + Tips">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Original Gangster Brown Leaves + Tips</div>
+                            <div class="item-weigth">1 unit</div>
+                            <div class="item-price">
+                                <div class="price">₹90</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/app/images/products/sliding_image/539884a.jpg"
+                                alt="Rolling Paper with Crusher Tray - 4us">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Rolling Paper with Crusher Tray - 4us</div>
+                            <div class="item-weigth">33 pcs</div>
+                            <div class="item-price">
+                                <div class="price">₹169 <span class="old-price">₹250</span></div>
+                                <div class="discount">32% OFF</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/app/images/products/sliding_image/539902a.jpg"
+                                alt="Mozo King Size Bleached Rolling Paper">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Mozo (King Size, Bleached) Rolling Paper</div>
+                            <div class="item-weigth">32 leaves + 32 filters</div>
+                            <div class="item-price">
+                                <div class="price">₹80</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="items">
+                <div class="tittle">
+                    <div class="category-name">
+                        Snacks & Munchies
+                    </div>
+                    <a href="#">see all</a>
+                </div>
+
+                <div class="list-items">
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/3eae3870-eb2a-43eb-ad30-967d17f7d691.png"
+                                alt="Protein Chef Baked Coated Peanuts Masala Roasted Healthy Snacks">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Protein Chef Baked Coated Peanuts Masala Roasted Healthy Snacks</div>
+                            <div class="item-weigth">50 g</div>
+                            <div class="item-price">
+                                <div class="price">₹75</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/4a2d5e14-4425-4d2d-8958-6d51c6fd73d9.png"
+                                alt="Lo! Foods Gluten Free Ragi Chips Roasted Healthy Snacks">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Lo! Foods Gluten Free Ragi Chips Roasted Healthy Snacks</div>
+                            <div class="item-weigth">75 g</div>
+                            <div class="item-price">
+                                <div class="price">₹99</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/815e8dd5-37e9-4dc2-b3f7-ded08e12a7ab.png"
+                                alt="Pringles Original Potato Chips Pack of 2">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Pringles Original Potato Chips – Pack of 2</div>
+                            <div class="item-weigth">2 × 107 g</div>
+                            <div class="item-price">
+                                <div class="price">₹187 <span class="old-price">₹250</span></div>
+                                <div class="discount">25% OFF</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/601ddf50-8737-4c84-b71e-479005fdf535.png"
+                                alt="Kettle Studio Sweet Chilli With Lime & Basil Potato Chips">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Kettle Studio Sweet Chilli With Lime & Basil Potato Chips</div>
+                            <div class="item-weigth">113 g</div>
+                            <div class="item-price">
+                                <div class="price">₹99</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/fe70ea27-8ead-446d-be12-f8f8d45c4d0e.png"
+                                alt="Kab’s Jackpot Cheese Balls">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Kab’s Jackpot Cheese Balls</div>
+                            <div class="item-weigth">60 g</div>
+                            <div class="item-price">
+                                <div class="price">₹65</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-img">
+                            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/850294f3-7d80-4730-b2b6-f5b471d81054.png"
+                                alt="Protein Chef Madras Mixture Namkeen High Protein Healthy Snacks">
+                        </div>
+                        <div class="item-detail">
+                            <div class="timer">
+                                <i class="fa-regular fa-clock"></i> 17 MINS
+                            </div>
+                            <div class="item-name">Protein Chef Madras Mixture Namkeen High Protein Healthy Snacks</div>
+                            <div class="item-weigth">90 g</div>
+                            <div class="item-price">
+                                <div class="price">₹99</div>
+                                <div class="button">
+                                    <button>Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+
+                    
+
+                </div>
+            </section>
+
+
+
+
+
+        </div>
+
+    </main>
+    <footer class="footer">
+        made with <i class="fa-solid fa-heart"></i> by Kaif Pasha
+
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/v4-shims.min.js"
+        integrity="sha512-ADYQColMa2x3iTFA+Lscel6CH9IWwIQW9B/8um6FJvHZ8IFgSHCRhg8wXTXfH4psA0h6yvchGf8sjZwV07Je0Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
